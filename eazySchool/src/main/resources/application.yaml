@@ -1,0 +1,44 @@
+#server:
+#  port: 0
+#  servlet:
+#    context-path: /eazyschool
+
+#debug: true
+spring:
+  thymeleaf:
+    cache: false
+
+  datasource:
+    url: jdbc:mysql://spring.cxycsya4aiev.eu-north-1.rds.amazonaws.com/eazyschool
+    username: admin
+    password: MysqlSpring
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+      javax:
+        persistence:
+          validation:
+            mode: none
+  data:
+    rest:
+      base-path: /data-api
+
+  output:
+    ansi:
+      enabled: always
+
+#trace: true
+#debug: true
+#logging:
+#  level:
+#    root: info
+#    com :
+#      eazybytes:
+#        eazyschool:
+#          aspects: error
+#          controller: trace
+
